@@ -39,10 +39,6 @@ class LR(object):
         self.loss_result = check_folder(self.result_dir + '/' + self.model_dir) + '/' + self.model_name + '_loss'
 
     def classifier(self, x, is_training=True, reuse=False):
-        # Network Architecture is exactly same as in infoGAN (https://arxiv.org/abs/1606.03657)
-        # Architecture : (64)5c2s-(128)5c2s_BL-FC1024_BL-FC128_BL-FC12S’
-        # All layers except the last two layers are shared by discriminator
-        # Number of nodes in the last layer is reduced by half. It gives better results.
         with tf.variable_scope("classifier", reuse=reuse):
             # net = lrelu(linear(x, 64, scope='c_fc1', is_training=is_training, drop_out_keep=1.0),
             #             is_training=is_training, scope='c_bn1')
