@@ -17,10 +17,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description=desc)
 
     parser.add_argument('--type', type=str, default='LR',
-                        choices=['LR', 'DNN'],
                         help='The type of Model', required=True)
     parser.add_argument('--dataset', type=str, default='mnist',
-                        choices=['mnist', 'fashion-mnist', 'fq_sample', 'pd_sample', 'stacking'],
                         help='The name of dataset')
     parser.add_argument('--epoch', type=int, default=20, help='The number of epochs to run')
     parser.add_argument('--batch_size', type=int, default=64, help='The size of batch')
@@ -60,10 +58,12 @@ def check_args(args):
 
 
 def main():
+    print("beginning......")
     # parse arguments
     args = parse_args()
     if args is None:
         exit()
+    print("result_dir is: " + arg.result_dir)
 
     # open session
     models = [LR, DNN, ResNet50]
