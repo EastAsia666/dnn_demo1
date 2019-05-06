@@ -14,6 +14,7 @@
 
 FROM tensorflow/tensorflow:1.5.0
 
+RUN mkdir /data
 RUN mkdir /data/dnn_samples
 RUN mkdir /data/dnn_samples/train
 RUN mkdir /data/dnn_samples/valid
