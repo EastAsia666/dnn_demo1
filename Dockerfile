@@ -14,9 +14,12 @@
 
 FROM tensorflow/tensorflow:1.5.0
 
-RUN mkdir /var/logs
-RUN mkdir /var/logs/train
-RUN mkdir /var/logs/test
-RUN mkdir /var/serving_dir
-ADD . /var/tf_dist_mnist
-ENTRYPOINT ["python", "/var/tf_dist_mnist/mnist.py"]
+RUN mkdir /data/dnn_samples
+RUN mkdir /data/dnn_samples/train
+RUN mkdir /data/dnn_samples/valid
+RUN mkdir /data/dnn_samples/test
+RUN mkdir /data/checkpoint_dir
+RUN mkdir /data/result_dir
+RUN mkdir /data/log_dir
+ADD . /var/dnn_demo
+ENTRYPOINT ["python", "/var/dnn_demo/ResNet.py"]
