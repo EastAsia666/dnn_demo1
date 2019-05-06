@@ -93,7 +93,7 @@ class ResNet50(object):
     model_name = "ResNet50"  # name for checkpoint
 
     def __init__(self, sess, all_cnt, epoch, batch_size, dataset_name, checkpoint_dir, result_dir, log_dir):
-        self.data_dir = os.path.join("./data", dataset_name)
+        self.data_dir = os.path.join("/kubeflow/dnn_demo/data", dataset_name)
         self.sess = sess
         self.all_cnt = all_cnt
         self.dataset_name = dataset_name
