@@ -63,7 +63,7 @@ def main():
     args = parse_args()
     if args is None:
         exit()
-    print("result_dir is: " + arg.result_dir)
+    print("result_dir is: " + args.result_dir)
 
     # open session
     models = [LR, DNN, ResNet50]
