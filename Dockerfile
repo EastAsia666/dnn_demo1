@@ -22,4 +22,4 @@ RUN mkdir /data/checkpoint_dir
 RUN mkdir /data/result_dir
 RUN mkdir /data/log_dir
 ADD . /var/dnn_demo
-ENTRYPOINT ["python", "/var/dnn_demo/ResNet.py"]
+ENTRYPOINT ["python", "/var/dnn_demo/main.py"]
