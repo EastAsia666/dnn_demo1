@@ -1,10 +1,10 @@
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
-from .LR import LR
-from .dnn_demo1 import DNN
-from .ResNet import ResNet50
-from .utils import show_all_variables
-from .utils import check_folder
+from LR import LR
+from dnn_demo1 import DNN
+from ResNet import ResNet50
+from utils import show_all_variables
+from utils import check_folder
 
 import tensorflow as tf
 import argparse

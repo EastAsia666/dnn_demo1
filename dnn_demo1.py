@@ -4,12 +4,12 @@ import os
 import time
 import tensorflow as tf
 import numpy as np
-from .data_reader_new import *
+from data_reader_new import *
 from sklearn.metrics import roc_auc_score
-from .adabound import AdaBoundOptimizer
+from adabound import AdaBoundOptimizer
 
-from .ops import *
-from .utils import *
+from ops import *
+from utils import *
 
 
 class DNN(object):

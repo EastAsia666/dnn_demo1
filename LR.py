@@ -5,8 +5,8 @@ import time
 import tensorflow as tf
 import numpy as np
 
-from .ops import *
-from .utils import *
+from ops import *
+from utils import *
 
 
 class LR(object):
